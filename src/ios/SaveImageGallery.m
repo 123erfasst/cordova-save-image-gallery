@@ -47,9 +47,9 @@
             double currentTime = CACurrentMediaTime();
             
             // set fileName
-            NSString *timeString = [NSString stringWithFormat : @"%f", currentTime];
-            timeString = [timeString stringByReplacingOccurrencesOfString : @"." withString : @""];
-            NSString *fileName = [prefix stringByAppendingString : timeString];
+			NSUUID *uuid = [NSUUID UUID];
+			NSString *str = [uuid UUIDString];
+            NSString *fileName = [prefix stringByAppendingString : str];
             fileName = [fileName stringByAppendingString : imageExtension];
             
             NSString *libPath = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES)[0];
