@@ -43,9 +43,6 @@
                 imageExtension = @".jpg";
             }
             
-            // get Timestamp
-            double currentTime = CACurrentMediaTime();
-            
             // set fileName
 			NSUUID *uuid = [NSUUID UUID];
 			NSString *str = [uuid UUIDString];
